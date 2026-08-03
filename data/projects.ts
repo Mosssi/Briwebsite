@@ -72,4 +72,44 @@ export const projects: Project[] = [
     live: "https://group-zoo-assignment.vercel.app",
     code: "https://github.com/Callum-Jones230893/Group-zoo-assignment",
   },
-];
+
+  {
+    slug: "video",
+    title: "Video App — Design System & Product UI",
+    cover: "/projects/video/01.png",
+    tech: "UI Design · Design System · Icon Library · Sketch",
+    description:
+      "Sole designer for a short-video streaming product: full design system, icon library, and every screen.",
+    blocks: [
+      {
+        type: "text",
+        body: "A short-video streaming platform where users filter videos by preference and receive personalized recommendations. The product covers video playback, search, paid content, and a VIP membership system. I designed the entire product solo — from the icon library to every screen.",
+      },
+      {
+        type: "text",
+        heading: "Design System & Guidelines",
+        body: "I walked the full \u201czero to design system\u201d path: define the visual identity first, then codify the rules — typography, a primary/secondary color scale, a neutral ramp, and a general icon set spanning navigation, actions, membership, and coins — so every later screen was assembled instead of reinvented.",
+      },
+      { type: "image", src: "/projects/video/typography-color.png" },
+      { type: "image", src: "/projects/video/design.png" },
+      {
+        type: "text",
+        heading: "Video Player",
+        body: "The player was designed for both light and dark contexts, with a compact variant for in-feed preview. Playback controls, progress states, and overlay layers were specified as components, so the same behavior could be reused across full-screen, embedded, and preview scenarios.",
+      },
+      { type: "image", src: "/projects/video/video.png" },
+      {
+        type: "text",
+        heading: "GIF Creation Tool",
+        body: "A built-in clip-to-GIF tool: select your best 8 seconds, generate, share — three steps. Progress and result screens keep the player's dark context, so the tool feels continuous with content consumption rather than bolted on.",
+      },
+      { type: "image", src: "/projects/video/git.png" },
+      {
+        type: "text",
+        heading: "Account System",
+        body: "Complete account flows — profile, phone and email binding, pattern lock, account recovery, and password reset — with every state specified, including empty, loading, and error states. Rank badges and the membership tier system gave the product a progressive visual ramp without adding interface complexity.",
+      },
+      { type: "image", src: "/projects/video/account.png" },
+    ],
+  },
+  ];
