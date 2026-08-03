@@ -1,0 +1,40 @@
+import Link from "next/link";
+import Image from "next/image";
+import { MoveRight } from "lucide-react";
+import type { Project } from "@/data/projects";
+
+export default function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div className="flex flex-col border border-gray-600">
+      <Link
+        href={`/projects/${project.slug}`}
+        className="relative block h-40 overflow-hidden"
+      >
+        <Image
+          src={project.cover}
+          alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition duration-300 hover:scale-105"
+        />
+      </Link>
+      <div className="border-t border-gray-600 px-3 py-2 font-mono text-xs text-gray-400">
+        {project.tech}
+      </div>
+      <div className="flex flex-1 flex-col gap-3 border-t border-gray-600 p-4">
+        <Link href={`/projects/${project.slug}`}>
+          <h3 className="font-mono text-lg text-white transition hover:text-accent">
+            {project.title}
+          </h3>
+        </Link>
+        <p className="flex-1 text-sm text-gray-400">{project.description}</p>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="flex items-center gap-1.5 self-start border border-accent px-3 py-1.5 font-mono text-[13px] text-accent transition hover:bg-accent hover:text-black"
+        >
+          View Case <MoveRight size={14} />
+        </Link>
+      </div>
+    </div>
+  );
+}
