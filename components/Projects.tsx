@@ -9,7 +9,7 @@ export default function Projects() {
     <section id="projects" className="pb-28">
       <SectionHeading title="Projects" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {projects.slice(0, 6).map((p) => (
+        {projects.slice(0, 3).map((p) => (
           <ProjectCard key={p.slug} project={p} />
         ))}
       </div>

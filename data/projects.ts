@@ -112,4 +112,27 @@ export const projects: Project[] = [
       { type: "image", src: "/projects/video/account.png" },
     ],
   },
-  ];
+
+  {
+    slug: "personal",
+    title: "Personal Work & Explorations",
+    cover: "/projects/personal/01.png",
+    tech: "UI Design · Visual Exploration",
+    description:
+      "Early personal work — kept to show where I started and how far the craft has come.",
+    blocks: [
+      {
+        type: "text",
+        body: "A sign-in flow exploration for a photography app: a full-bleed hero photo sets the mood, and the form screen keeps the same image as a dimmed backdrop, so the transition from browsing to logging in feels continuous.",
+      },
+      { type: "image", src: "/projects/personal/01.png" },
+      {
+        type: "text",
+        heading: "Where it started",
+        body: "A personal website made very early in my career. By today's standards it isn't polished, but I choose to keep and show it — it documents where I started, and keeps the growth arc of this portfolio complete and honest.",
+      },
+      { type: "image", src: "/projects/personal/03.png" },
+    ],
+  },
+];
+

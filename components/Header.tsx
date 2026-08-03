@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Design" },
    { href: "/code", label: "Code" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#contacts", label: "Contacts" },
+  { href: "/contacts", label: "Contacts" },
 ];
 
 export default function Header() {
