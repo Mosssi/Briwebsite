@@ -11,5 +11,8 @@ export const skills = [
     group: "Tools",
     items: ["Tailwind", "MUI", "next-intl", "REST APIs", "Git", "Vercel"],
   },
-  { group: "Languages", items: ["English (fluent)", "Mandarin (fluent)"] },
+  {
+    group: "Languages",
+    items: ["English (fluent)", "Mandarin (native)"],
+  },
 ];

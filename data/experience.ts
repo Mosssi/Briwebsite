@@ -1,30 +1,37 @@
 export const experience = [
   {
-    role: "UI Designer (Remote / Digital Nomad)",
+    role: "Senior UI Designer (Independent Contractor)",
     period: "10/2022 – 09/2025",
-    org: "Outwit · Remote",
+    org: "Independent · Remote / Digital Nomad",
     description:
-      "Collaborated with a distributed team of designers on the visual design of 2 consumer apps spanning 4 platforms across mobile and web, keeping multilingual layouts consistent across every release. Interfaced daily with PM, frontend, and backend teams via remote standups, shipping seasonal campaigns and product releases on 1–2 month cycles.",
+      "Designed the visual systems for 2 apps across 4 platforms (app + web each) — a sports platform and a gaming platform. Built 3 full language systems (English, Chinese, Vietnamese) with a flexible component library spec that kept layout behavior consistent across all locales. Shipped on 1–2 month cycles (requirement → prototype → design → frontend → QA → release) via daily remote standups with ops, PM, frontend, and backend.",
   },
   {
-    role: "UI / Visual Designer",
+    role: "UI Designer (Video & Streaming Platform)",
     period: "09/2018 – 07/2022",
-    org: "Oceanic Symphony · Makati, Philippines",
+    org: "Acstream · Makati, Philippines",
     description:
-      "Partnered with PMs and frontend developers to design 3 product lines (2 gaming + 1 video/live-streaming) at a ~30-person B2B company. Built a Sketch component design system enabling one-click re-theming across 26 color variants, cutting a multi-week re-skinning effort down to 1–2 days.",
+      "Led visual design for 3 product lines (2 gaming + 1 video/live-streaming) at a ~30-person B2B company, owning UI across web and app. Built a Sketch component-based design system enabling one-click re-theming across 26 color variants — cutting a multi-week reskinning effort to 1–2 days. Acted as the final visual QA gate before release, protecting spacing, shadows, and states in implementation.",
   },
   {
-    role: "Visual Designer & Content Strategist (Co-founding Team)",
-    period: "05/2017 – 08/2018",
-    org: "Yihan Creative · Hangzhou, China",
+    role: "Visual Designer & Content Strategist",
+    period: "05/2017 – 07/2018",
+    org: "Niba Gongshe · Hangzhou, China",
     description:
-      "Acted as the sole designer at an 8-person lifestyle startup, owning the full visual identity and content strategy across 3 sales channels (Taobao, WeChat store, website). Produced WeChat editorial content and directed in-studio product photography.",
+      "Sole designer at an 8-person home & lifestyle startup, owning the full visual identity and content strategy across 3 sales channels (Taobao, WeChat store, website). Ran the brand's WeChat account with localized editorial content, and handled in-studio product photography and hand-drawn illustration.",
   },
   {
-    role: "Digital Designer / Web Designer",
+    role: "Digital / Web Designer",
     period: "10/2015 – 04/2017",
     org: "Dookay · Shanghai, China",
     description:
-      "Delivered ~20 client websites across 11+ industries (e-commerce, insurance, education, logistics, sports, and more) at a B2C design agency, translating varied client briefs into shipped sites on 1-week to 1-month cycles.",
+      "Independently delivered 20 client websites across 11+ industries — e-commerce, insurance, logistics, education, sports, and more — on 1-week to 1-month cycles. Designed early WeChat mini-program / H5 commerce experiences and big-data dashboard visualization sites.",
+  },
+  {
+    role: "Visual Design Intern",
+    period: "07/2014 – 02/2015",
+    org: "Taobao · Xiamen, China",
+    description:
+      "Sole designer for a menswear Taobao store: product detail pages, photo retouching, and promotional assets. First exposure to conversion-driven design.",
   },
 ];
