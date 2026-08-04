@@ -21,7 +21,7 @@ export default function Hero() {
     <section id="home" className="pt-20 pb-24 md:pt-24 md:pb-28">
       <p className="mb-6 text-lg">👋 Hi I am</p>
       <Image
-        src="/images/avatar.jpg"
+        src="/images/avatar3.jpg"
         alt="Brianna Strand"
         width={64}
         height={64}
