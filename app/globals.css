@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #99F500;
+  --color-accent: #99f500;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
