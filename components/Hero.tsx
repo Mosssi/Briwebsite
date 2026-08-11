@@ -53,9 +53,9 @@ export default function Hero() {
       </p>
 
       <p className="mb-8 max-w-[760px] text-lg md:text-xl">
-        10 years of product design experience, now building with React,
-        TypeScript, Next.js and Tailwind. Currently studying Frontend
-        Development at Futuregames Stockholm — open to LIA & junior roles.
+        Freelance UI Designer turned Frontend Developer. Building with React,
+        TypeScript, Next.js, and Tailwind. Currently studying at Futuregames
+        Stockholm & open to LIA / junior roles.
       </p>
 
       <div className="flex gap-5">
@@ -66,7 +66,7 @@ export default function Hero() {
             target="_blank"
             rel="noreferrer"
             aria-label={s.label}
-            className="mb-8 min-h-[1.6em] font-mono text-accent"
+            className="text-gray-400 transition hover:text-accent"
           >
             <s.icon size={22} />
           </a>
