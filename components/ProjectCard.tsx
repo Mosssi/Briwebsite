@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MoveRight } from "lucide-react";
 import type { Project } from "@/data/projects";
+import LinkButton from "@/components/LinkButton";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="flex flex-col border border-gray-600">
+    <div className="flex flex-col group border border-gray-700 transition-colors hover:border-accent">
       <Link
         href={`/projects/${project.slug}`}
         className="relative block h-40 overflow-hidden"
@@ -28,12 +28,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           </h3>
         </Link>
         <p className="flex-1 text-sm text-gray-400">{project.description}</p>
-        <Link
+         <LinkButton
           href={`/projects/${project.slug}`}
-          className="flex items-center gap-1.5 self-start border border-accent px-3 py-1.5 font-mono text-[13px] text-accent transition hover:bg-accent hover:text-black"
+          icon={<>&lt;~&gt;</>}
         >
-          View Case <MoveRight size={14} />
-        </Link>
+          View Case
+        </LinkButton>
       </div>
     </div>
   );

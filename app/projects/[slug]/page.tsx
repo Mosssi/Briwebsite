@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import LinkButton from "@/components/LinkButton";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -31,27 +32,16 @@ export default async function ProjectPage({
       </h1>
       <p className="mb-10 font-mono text-sm text-gray-400">{project.tech}</p>
 
-      {(project.live || project.code) && (
-        <div className="mb-12 flex gap-3 font-mono text-[13px]">
+            {(project.live || project.code || project.figma) && (
+        <div className="mb-12 flex flex-wrap gap-3">
           {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 border border-accent px-3 py-1.5 text-accent transition hover:bg-accent hover:text-black"
-            >
-              Live <MoveRight size={14} />
-            </a>
+            <LinkButton href={project.live} external>Live</LinkButton>
           )}
           {project.code && (
-            <a
-              href={project.code}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 border border-gray-500 px-3 py-1.5 text-gray-300 transition hover:border-white hover:text-white"
-            >
-              Code <MoveRight size={14} />
-            </a>
+            <LinkButton href={project.code} external>Code</LinkButton>
+          )}
+          {project.figma && (
+            <LinkButton href={project.figma} external>Figma</LinkButton>
           )}
         </div>
       )}

@@ -11,16 +11,17 @@ export type Project = {
   blocks: Block[];
   live?: string;
   code?: string;
+  figma?:string;
 };
 
 export const projects: Project[] = [
   {
     slug: "hss",
-    title: "HSS Scout Website",
+    title: "Rebuild HSS Scout Website",
     cover: "/projects/hss/01.png",
-    tech: "Next.js · TypeScript · next-intl",
+    tech: "Figma · Next.js · TypeScript · next-intl",
     description:
-      "Real-client team project: bilingual site with Instagram feed via Behold API.",
+      "Website for a Swedish sea scout organization — traditions, activities, and community.",
     blocks: [
       {
         type: "text",
@@ -37,8 +38,9 @@ export const projects: Project[] = [
       { type: "image", src: "/projects/hss/04.png" },
       { type: "image", src: "/projects/hss/05.png" },
     ],
-    live: "https://hss-repo.vercel.app",
-    code: "https://github.com/SallyResch/hss-repo",
+    live: "https://rebuildhss.netlify.app/",
+    code: "https://github.com/Mosssi/rebuildHss.git",
+    figma:"https://www.figma.com/design/dLpaMEUu6033VVmcXlaIJ7/Brianna--Portfolio-DESIGN?node-id=0-1"
   },
   {
     slug: "zoo",
@@ -71,6 +73,7 @@ export const projects: Project[] = [
     ],
     live: "https://group-zoo-assignment.vercel.app",
     code: "https://github.com/Callum-Jones230893/Group-zoo-assignment",
+    figma:"https://www.figma.com/design/dLpaMEUu6033VVmcXlaIJ7/Brianna--Portfolio-DESIGN?node-id=0-1"
   },
 
   {

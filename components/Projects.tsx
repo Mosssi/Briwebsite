@@ -3,6 +3,7 @@ import { MoveRight } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
+import LinkButton  from "./LinkButton";
 
 export default function Projects() {
   return (
@@ -14,12 +15,10 @@ export default function Projects() {
         ))}
       </div>
       <div className="mt-10 flex justify-center">
-        <Link
-          href="/projects"
-          className="flex items-center gap-1.5 border border-gray-600 px-4 py-2 font-mono text-sm text-white transition hover:border-accent hover:text-accent"
-        >
-          View all <MoveRight size={14} />
-        </Link>
+        <LinkButton href="/projects">
+          View All
+        </LinkButton>
+          
       </div>
     </section>
   );
