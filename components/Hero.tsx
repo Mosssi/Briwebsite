@@ -52,11 +52,13 @@ export default function Hero() {
         />
       </p>
 
-      <p className="mb-8 max-w-[760px] text-lg md:text-xl">
-        Freelance UI Designer turned Frontend Developer. Building with React,
-        TypeScript, Next.js, and Tailwind. Currently studying at Futuregames
-        Stockholm & open to LIA / junior roles.
+      <p className="mb-8 max-w-[1080px] text-[16px] font-mono text-gray-400">
+        As a Senior UX/UI Designer with a decade of experience across e-commerce, gaming, and streaming products, I'm passionate about turning vague or incomplete input into clear, user-centered design that actually ships. I started at Dookay, a Shanghai design agency, designing for clients across ten-plus industries, then worked as the sole designer at Niba Gongshe, a lifestyle startup in Hangzhou.
+
+For several years I worked remotely as a freelance designer, building multilingual apps for clients across countries. Now based in Stockholm, I'm expanding into Frontend Development at FutureGames to close a gap I kept hitting with developers over implementation fidelity — I want to design and build with equal fluency. I'm flexible, self-driven, and ready to bring both design craft and technical skill to a new team.
       </p>
+       
+
 
       <div className="flex gap-5">
         {socials.map((s) => (
