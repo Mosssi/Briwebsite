@@ -1,6 +1,7 @@
 export type Block =
   | { type: "text"; heading?: string; body: string }
-  | { type: "image"; src: string };
+  | { type: "image"; src: string }
+  | { type:"links"; items:{ label: string; url:string } []}
 
 export type Project = {
   slug: string;
@@ -12,9 +13,53 @@ export type Project = {
   live?: string;
   code?: string;
   figma?:string;
+  externalOnly?: boolean;
 };
 
 export const projects: Project[] = [
+
+  {
+    slug: "ohss",
+    title: "HSS Sea Scouts — Website Design & Development",
+    cover: "/projects/ohss/00.png",
+    tech: "Next.js · TypeScript · next-intl · Behold API · MUI · Tailwind CSS",
+    description:
+      "A bilingual (Swedish/English) website for a real client — a Swedish sea scouting organization — built as part of a team project during my frontend diploma.",
+    blocks: [ 
+      {
+        type:"text",
+        heading: "Team project",
+        body: "Built with a small team as part of a class project for a real client. I helped design part of the web pages and part of the mobile layouts — picking up where a volunteer designer's initial mockups left off — and contributed to the frontend implementation, including bilingual routing with next-intl.",
+      },
+      { type: "image", src: "/projects/ohss/00.png" },
+      {
+        type: "text",
+        heading: "Features",
+        body: "The site included pages for Boats, Members, and Contact, along with full Swedish/English language switching and a live Instagram feed integration via the Behold API",
+      },
+      { type: "image", src: "/projects/ohss/02.png"},
+      { type: "image", src: "/projects/ohss/01.png"},
+    ],
+    live: "https://hss-repo.vercel.app/en",
+  code: "https://github.com/SallyResch/hss-repo.git",
+  figma: "https://www.figma.com/design/dLpaMEUu6033VVmcXlaIJ7/Brianna--Portfolio-DESIGN?node-id=196-25805",
+  },
+
+
+  {
+  slug: "briwebsite",
+  title: "Personal Portfolio Website",
+  cover: "/projects/briwebsite/01.png",
+  tech: "Next.js · TypeScript · Tailwind CSS",
+  description: "My own personal portfolio website — the one you're looking at right now.",
+  blocks: [],
+  code: "https://github.com/Mosssi/Briwebsite.git",
+  externalOnly: true,
+},
+
+
+
+
   {
     slug: "hss",
     title: "Rebuild HSS Scout Website",
@@ -137,5 +182,33 @@ export const projects: Project[] = [
       { type: "image", src: "/projects/personal/03.png" },
     ],
   },
+
+
+ 
+
+
+
+{
+  slug: "tarot",
+  title: "Tarot App",
+  cover: "/projects/tarot/01.png",   
+  tech: "React · MUI",
+  description: "A tarot card reading app built with React and Material UI.",
+  blocks: [],
+  code: "https://github.com/Mosssi/Tarot--MUI.git",
+  externalOnly: true,
+},
+{
+  slug: "study-checkin",
+  title: "Study Check-in — Jest Testing",
+  cover: "/projects/checkin/01.png", 
+  tech: "JavaScript · Jest",
+  description: "A class assignment focused on writing unit tests with Jest.",
+  blocks: [],
+  code: "https://github.com/Mosssi/study-checkin.git",
+  externalOnly: true,
+},
 ];
+
+
 

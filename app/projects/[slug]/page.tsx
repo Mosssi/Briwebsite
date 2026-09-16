@@ -47,8 +47,9 @@ export default async function ProjectPage({
       )}
 
       <div className="flex flex-col gap-10">
-        {project.blocks.map((block, i) =>
-          block.type === "text" ? (
+        {project.blocks.map((block, i) => {          
+          if (block.type === "text") {
+            return (
             <div key={i} className="max-w-[760px]">
               {block.heading && (
                 <h2 className="mb-3 font-mono text-2xl font-semibold text-white">
@@ -59,16 +60,33 @@ export default async function ProjectPage({
                 {block.body}
               </p>
             </div>
-          ) : (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+          );
+        }
+
+        if (block.type === "image"){
+          return(
+               <img
               key={i}
               src={block.src}
               alt={project.title}
               className="w-full"
             />
-          )
-        )}
+        );
+      }
+
+      if (block.type === "links"){
+          return(
+            <div key={i} className="flex flex-wrap gap-3">
+              {block.items.map((item) => (
+                <LinkButton key={item.url} href={item.url} external>
+                  {item.label}
+                </LinkButton>
+              ))}
+            </div>
+          );
+        }
+        return null;
+        })}
       </div>
     </main>
   );
