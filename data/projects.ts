@@ -24,7 +24,7 @@ export const projects: Project[] = [
     cover: "/projects/ohss/00.png",
     tech: "Next.js · TypeScript · next-intl · Behold API · MUI · Tailwind CSS",
     description:
-      "A bilingual (Swedish/English) website for a real client — a Swedish sea scouting organization — built as part of a team project during my frontend diploma.",
+      "A (Swedish/English) website for a real client built as part of a team project",
     blocks: [ 
       {
         type:"text",
@@ -56,9 +56,6 @@ export const projects: Project[] = [
   code: "https://github.com/Mosssi/Briwebsite.git",
   externalOnly: true,
 },
-
-
-
 
   {
     slug: "hss",

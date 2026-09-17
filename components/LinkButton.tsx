@@ -5,6 +5,7 @@ type Props = {
   children: React.ReactNode;
   external?: boolean;
   icon?: React.ReactNode;
+  subtle?: boolean;
 };
 
 export default function LinkButton({
@@ -12,9 +13,11 @@ export default function LinkButton({
   children,
   external,
   icon = <>&rarr;</>,
+  subtle = false,
 }: Props) {
-  const className =
-    "inline-flex items-center gap-1.5 self-start border border-accent px-3 py-1.5 font-mono text-[13px] text-accent transition hover:bg-accent/10 active:border-transparent active:bg-accent/20";
+  const className = subtle
+    ? "inline-flex items-center gap-1.5 self-start border border-gray-500 px-3 py-1.5 font-mono text-[13px] text-gray-300 transition group-hover:border-accent group-hover:text-accent group-hover:bg-accent/10 active:bg-accent/20"
+    : "inline-flex items-center gap-1.5 self-start border border-accent px-3 py-1.5 font-mono text-[13px] text-accent transition hover:bg-accent/10 active:border-transparent active:bg-accent/20";
 
   if (external) {
     return (

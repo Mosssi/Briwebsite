@@ -1,25 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "projects" },
+  { href: "/projects", label: "Projects" },
   { href: "/#experience", label: "Experience" },
   { href: "/contacts", label: "Contacts" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [hash, setHash] = useState("");
   const pathname = usePathname();
 
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, [pathname]);
+
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    if (href.startsWith("/#")) return false;
+    if (href === "/") return pathname === "/" && hash === "";
+    if (href.startsWith("/#")) {
+      const targetHash = href.slice(1); // "#experience"
+      return pathname === "/" && hash === targetHash;
+    }
     return pathname.startsWith(href);
+  };
+
+  const handleLinkClick = (href: string) => {
+    setOpen(false);
+    if (href === "/") {
+      setHash("");
+    } else if (href.startsWith("/#")) {
+      setHash(href.slice(1));
+    } else {
+      setHash("");
+    }
   };
 
   return (
@@ -28,7 +47,7 @@ export default function Header() {
         <Link
           href="/"
           className="font-mono text-2xl font-bold text-white"
-          onClick={() => setOpen(false)}
+          onClick={() => handleLinkClick("/")}
         >
           <span className="mr-1.5 text-[15px] text-accent">▚</span>Brianna
         </Link>
@@ -38,6 +57,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={() => handleLinkClick(link.href)}
               className="font-mono text-sm transition"
             >
               <span
@@ -76,7 +96,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => handleLinkClick(link.href)}
                   className="block py-3 font-mono text-base transition"
                 >
                   <span

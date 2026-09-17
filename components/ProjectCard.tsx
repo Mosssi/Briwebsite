@@ -29,16 +29,16 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </Link>
 
-      <div className="flex items-center justify-between border-t border-gray-600 px-3 py-2 font-mono text-xs text-gray-400">
+      <div className="flex min-h-[72px] items-start justify-between gap-2 border-t border-gray-600 px-3 py-2 font-mono text-xs text-gray-400">
         <span>{project.tech}</span>
-        <div className="flex gap-3">
+        <div className="flex shrink-0 gap-3 pt-0.5">
           {project.figma && (
             <a
               href={project.figma}
               target="_blank"
               rel="noreferrer"
               aria-label="View Figma design"
-              className="text-gray-400 transition hover:text-accent"
+              className="text-gray-400 transition group-hover:text-accent hover:text-accent"
               onClick={(e) => e.stopPropagation()}
             >
               <FaFigma size={14} />
@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               target="_blank"
               rel="noreferrer"
               aria-label="View code on GitHub"
-              className="text-gray-400 transition hover:text-accent"
+              className="text-gray-400 transition group-hover:text-accent hover:text-accent"
               onClick={(e) => e.stopPropagation()}
             >
               <FaGithub size={14} />
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="flex flex-1 flex-col gap-3 border-t border-gray-600 p-4">
         <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>
-          <h3 className="font-mono text-lg text-white transition hover:text-accent">
+          <h3 className="font-mono text-lg text-white transition group-hover:text-accent">
             {project.title}
           </h3>
         </Link>
@@ -69,6 +69,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <LinkButton
           href={href}
           icon={<>&lt;~&gt;</>}
+          subtle
           {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
         >
           View Case

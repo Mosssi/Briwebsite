@@ -53,9 +53,11 @@ export default function Hero() {
       </p>
 
       <p className="mb-8 max-w-[1080px] text-[16px] font-mono text-gray-400">
-        As a Senior UX/UI Designer with a decade of experience across e-commerce, gaming, and streaming products, I'm passionate about turning vague or incomplete input into clear, user-centered design that actually ships. I started at Dookay, a Shanghai design agency, designing for clients across ten-plus industries, then worked as the sole designer at Niba Gongshe, a lifestyle startup in Hangzhou.
+        I'm a UI Designer and Frontend Developer. I've worked on e-commerce, streaming, sports, and lifestyle products. Give me vague or incomplete input and I can turn it into something clear that actually ships.
+For several years I was a digital nomad — working remotely while traveling, designing multilingual apps for clients in different countries. I love travelling and experiencing different cultures.
+Now I'm based in Stockholm, studying Frontend Development at FutureGames, and looking for an internship.
 
-For several years I worked remotely as a freelance designer, building multilingual apps for clients across countries. Now based in Stockholm, I'm expanding into Frontend Development at FutureGames to close a gap I kept hitting with developers over implementation fidelity — I want to design and build with equal fluency. I'm flexible, self-driven, and ready to bring both design craft and technical skill to a new team.
+
       </p>
        
 
